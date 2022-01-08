@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+
+<!-- signup42:17-->
+<head>
+	<!-- Basic Page Needs
+	================================================== -->
+	<title>Placement Management System</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+	================================================== -->
+	<link rel="stylesheet" href="/assets/plugins/css/plugins.css">
+    
+    <!-- Custom style -->
+    <link href="/assets/css/style.css" rel="stylesheet">
+	<link type="text/css" rel="stylesheet" id="jssDefault" href="/assets/css/colors/green-style.css">
+      <style>
+    
+    body.simple-bg-screen:before
+    {
+    	height:180%;
+    }
+    .form-control {
+    border-radius: 30px;
+    }
+    
+    </style>
+	</head>
+	<body class="simple-bg-screen" style="background-image:url(/assets/img/rec.jpg);">
+		<div class="Loader"></div>
+		<div class="wrapper">  
+			
+			<!-- Title Header Start -->
+			<section class="signup-screen-sec">
+				<div class="container">
+					<div class="signup-screen">
+						<h2 style="text-align: center;">Student Registration</h2>
+						<form action="#" th:action="@{/save}" th:object="${student}"  method="post" >
+							<input type="text" class="form-control" placeholder="Your Name" name="sname" th:field="*{sname}">
+							<input type="text" class="form-control" placeholder="Your Course" name="course" th:field="*{course}">			
+							<input type="text" class="form-control" placeholder="Enter your Branch" name="branch" th:field="*{branch}">
+							<input type="date" class="form-control" placeholder="Enter Date of Birth" name="dob" th:field="*{dob}">
+							<input type="number" class="form-control" placeholder="Enter 10th Percentage" name="s_marks" th:field="*{s_marks}">
+							<input type="number" class="form-control" placeholder="Enter 12th Percentage" name="hs_marks" th:field="*{hs_marks}">
+							<input type="number" class="form-control" placeholder="Enter Graduation Percentage" name="b_marks" th:field="*{b_marks}">
+							<input type="number" class="form-control" placeholder="Enter Post Graduation Percentage" name="m_marks" th:field="*{m_marks}">
+							<textarea rows="5" class="form-control" name="address" th:field="*{address}" placeholder="Enter your address"></textarea>
+							<input type="number" class="form-control" placeholder="Enter Contact number" name="contact" th:field="*{contact}">
+							<input type="email" class="form-control" placeholder="Enter e-mail" name="email" th:field="*{email}">
+							<input type="password" class="form-control" placeholder="Enter Password" th:field="*{password}">
+							<input type="password" class="form-control" placeholder="Retype Password">
+							<button class="btn btn-login" type="submit" >Sign Up</button>
+							<span>Do you have an account? <a th:href="@{/student/signin}"> Login</a></span>	
+						</form>
+					</div>
+				</div>
+			</section>
+			
+			<div class="w3-sidebar w3-bar-block w3-card-2 w3-animate-right" style="display:none;right:0;" id="rightMenu">
+				<ul id="styleOptions" title="switch styling">
+					<li>
+						<a href="javascript: void(0)" class="cl-box blue" data-theme="colors/blue-style"></a>
+					</li>
+					<li>
+						<a href="javascript: void(0)" class="cl-box red" data-theme="colors/red-style"></a>
+					</li>
+					<li>
+						<a href="javascript: void(0)" class="cl-box purple" data-theme="colors/purple-style"></a>
+					</li>
+					<li>
+						<a href="javascript: void(0)" class="cl-box green" data-theme="colors/green-style"></a>
+					</li>
+					<li>
+						<a href="javascript: void(0)" class="cl-box dark-red" data-theme="colors/dark-red-style"></a>
+					</li>
+					<li>
+						<a href="javascript: void(0)" class="cl-box orange" data-theme="colors/orange-style"></a>
+					</li>
+					<li>
+						<a href="javascript: void(0)" class="cl-box sea-blue" data-theme="colors/sea-blue-style "></a>
+					</li>
+					<li>
+						<a href="javascript: void(0)" class="cl-box pink" data-theme="colors/pink-style"></a>
+					</li>
+				</ul>
+			</div>
+			
+			<!-- Scripts
+			================================================== -->
+			<script type="text/javascript" src="/assets/plugins/js/jquery.min.js"></script>
+			<script type="text/javascript" src="/assets/plugins/js/viewportchecker.js"></script>
+			<script type="text/javascript" src="/assets/plugins/js/bootstrap.min.js"></script>
+			<script type="text/javascript" src="/assets/plugins/js/bootsnav.js"></script>
+			<script type="text/javascript" src="/assets/plugins/js/select2.min.js"></script>
+			<script type="text/javascript" src="/assets/plugins/js/wysihtml5-0.3.0.js"></script>
+			<script type="text/javascript" src="/assets/plugins/js/bootstrap-wysihtml5.js"></script>
+			<script type="text/javascript" src="/assets/plugins/js/datedropper.min.js"></script>
+			<script type="text/javascript" src="/assets/plugins/js/dropzone.js"></script>
+			<script type="text/javascript" src="/assets/plugins/js/loader.js"></script>
+			<script type="text/javascript" src="/assets/plugins/js/owl.carousel.min.js"></script>
+			<script type="text/javascript" src="/assets/plugins/js/slick.min.js"></script>
+			<script type="text/javascript" src="/assets/plugins/js/gmap3.min.js"></script>
+			<script type="text/javascript" src="/assets/plugins/js/jquery.easy-autocomplete.min.js"></script>
+			
+			<!-- Custom Js -->
+			<script src="/assets/js/custom.js"></script>
+			<script src="/assets/js/jQuery.style.switcher.js"></script>
+			<script type="text/javascript">
+				$(document).ready(function() {
+					$('#styleOptions').styleSwitcher();
+				});
+			</script>
+			<script>
+				function openRightMenu() {
+					document.getElementById("rightMenu").style.display = "block";
+				}
+
+				function closeRightMenu() {
+					document.getElementById("rightMenu").style.display = "none";
+				}
+			</script>
+		</div>
+	</body>
+
+<!-- signup42:17-->
+</html>
